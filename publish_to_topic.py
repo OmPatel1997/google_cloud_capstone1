@@ -53,8 +53,8 @@ class api_to_pubsub:
 if __name__ == "__main__":
     
     publish_object = api_to_pubsub()
-    for i in range(1):
+    for i in range(10):
         message = publish_object.fetch_covid_data()
         # print(message)
         publish_object.send_to_topic(message)
-        # sleep(20)
+        sleep(20)
